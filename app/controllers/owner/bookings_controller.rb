@@ -1,6 +1,20 @@
 class Owner::BookingsController < ApplicationController
-<<<<<<< HEAD
+  def index
+    @bookings = Booking.all
+  end
 
-=======
->>>>>>> a0bb0e46626af56b76bc51dca176218e62afce4d
+  def edit
+  end
+
+  def update
+    @booking.update(booking_params)
+    redirect_to booking_path(@booking)
+  end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(:start_date, :end_date, :status, :user_id, :lambo_id)
+  end
+
 end
