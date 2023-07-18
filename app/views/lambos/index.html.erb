@@ -1,0 +1,17 @@
+<h1>Lambos List</h1>
+<div>
+<% @lambos.each do |lambo| %>
+  <h3>Lambo#<%= lambo.id %></h3>
+  <ul>
+  <li>Model: <%= lambo.model %></li>
+  <li>Year: <%= lambo.year %></li>
+  <li>Price: <%= lambo.price %></li>
+  <li>Description: <%= lambo.description %></li>
+  <li>Email: <%= lambo.user.email %></li>
+  <li>Detail: <%= link_to "click here", lambo_path(lambo) %></li>
+  </ul>
+<% end %>
+</div>
+
+<%= link_to "Add new lambo", new_lambo_path(@current_user) %>
+<%# need to have @user from session or sign up info %>
