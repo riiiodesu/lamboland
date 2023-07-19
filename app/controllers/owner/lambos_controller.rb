@@ -1,5 +1,5 @@
 class Owner::LambosController < ApplicationController
   def index
-    @lambos = Lambo.all
+    @lambos = policy_scope([:owner, Lambo])
   end
 end

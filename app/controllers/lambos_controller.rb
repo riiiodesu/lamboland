@@ -2,7 +2,7 @@ class LambosController < ApplicationController
   # before_action :set_user, only: %i[new create]
 
   def index
-    @lambos = Lambo.all
+    @lambos = policy_scope(Lambo)
   end
 
   def new
