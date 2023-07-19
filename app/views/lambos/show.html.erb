@@ -1,1 +1,5 @@
 <h1>Details of Lambo# <%= @lambo.id %></h1>
+<div>Description: <%= @lambo.description %></div>
+<div>Email: <%= @lambo.user.email %></div>
+
+<%= link_to "Booking this car", new_lambo_booking_path(@lambo) %>
