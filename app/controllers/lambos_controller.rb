@@ -21,7 +21,7 @@ class LambosController < ApplicationController
   end
 
   def show
-    @lambo = Lambo.find(current_user.id)
+    @lambo = Lambo.find(params[:id])
   end
 
   private
