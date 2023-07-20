@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  resources :bookings, only: [:index, :update]
+  resources :bookings, only: [:index, :create, :new, :update]
   # Defines the root path route ("/")
   root to: "pages#home"
   resources :lambos, only: [:index, :show, :new, :create] do
