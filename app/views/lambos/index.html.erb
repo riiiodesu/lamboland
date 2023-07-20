@@ -6,9 +6,7 @@
   <li>Model: <%= lambo.model %></li>
   <li>Year: <%= lambo.year %></li>
   <li>Price: <%= lambo.price %></li>
-  <li>Description: <%= lambo.description %></li>
-  <li>Email: <%= lambo.user.email %></li>
-  <li>Detail: <%= link_to "click here", lambo_path(lambo) %></li>
+  <%= link_to "Details", lambo_path(lambo) %></li>
   </ul>
 <% end %>
 </div>
