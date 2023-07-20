@@ -7,8 +7,11 @@ class Owner::BookingsController < ApplicationController
   end
 
   def update
-    @booking.update(booking_params)
-    redirect_to booking_path(@booking)
+    if @booking.update(booking_params)
+      redirect_to booking_path(@booking)
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private

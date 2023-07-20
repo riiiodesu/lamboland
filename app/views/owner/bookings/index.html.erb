@@ -7,8 +7,6 @@
     <h3 class="mb-0">My Bookings</h3>
 
   </div>
-
-   <% if current_user %>
   <div class="row">
     <% @bookings.each do |booking| %>
       <div class="co-12 col-sm-6 col-md-4 mb-3">
@@ -23,6 +21,6 @@
       </div>
     <% end %>
   </div>
-<% end %>
+
 </div>
 </div>
