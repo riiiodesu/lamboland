@@ -5,7 +5,6 @@
 <div class="container py-5">
   <div class="d-flex align-items-center justify-content-between mb-3">
     <h3 class="mb-0">My Bookings</h3>
-    
 
   </div>
   <div class="row">
@@ -14,7 +13,7 @@
         <%= link_to booking_path(booking), class:"text-decoration-none" do %>
           <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : asset_path('list_background.jpg') %>)">
 
-            <%= current_user.bookings %>        
+            <%= current_user.bookings %>
 
           </div>
         <% end %>
@@ -22,4 +21,5 @@
     <% end %>
   </div>
 
+</div>
 </div>
