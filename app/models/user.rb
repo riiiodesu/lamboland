@@ -5,5 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :lambos
   has_many :bookings
+<<<<<<< HEAD
   has_many :bookings_as_owner, through: :lambos, source: :bookings
+=======
+>>>>>>> master
 end
