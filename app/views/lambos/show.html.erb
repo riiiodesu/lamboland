@@ -2,5 +2,6 @@
 
 <div>Description: <%= @lambo.description %></div>
 <div>Email: <%= @lambo.user.email %></div>
+<%= cl_image_tag @lambo.photo.key, height: 300, width: 400, crop: :fill %>
 
 <%= link_to "Booking this car", new_lambo_booking_path(@lambo) %>
