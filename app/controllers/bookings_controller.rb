@@ -6,13 +6,14 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @current_user = current_user
   end
 
   def create
-    @booking.user = user
-    @booking = Booking.find(booking_params[:lambo_id])
+    @booking = Booking.new(booking_params)
+    @booking.user = current_user
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to bookings_path
     else
       render :new, status: :unprocessable_entity
     end
