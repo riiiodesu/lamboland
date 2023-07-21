@@ -4,5 +4,6 @@
   <%= f.input :year %>
   <%= f.input :price %>
   <%= f.input :description %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit "Submit review", class: "btn btn-primary" %>
 <% end %>

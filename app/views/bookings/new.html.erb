@@ -5,8 +5,8 @@
       <div class="bg-white rounded p-3 shadow">
 
         <h3>Create a new booking </h3>
-
         <%= simple_form_for [@lambo, @booking] do |f| %>
+
           <%= f.input :start_date %>
           <%= f.input :end_date %>
           <%# <%= f.input :lambo_id %>

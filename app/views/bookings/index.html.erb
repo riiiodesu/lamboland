@@ -12,14 +12,12 @@
   <div class="row">
     <% @bookings.each do |booking| %>
       <div class="co-12 col-sm-6 col-md-4 mb-3">
-        <%# <%= link_to booking_path(booking), class:"text-decoration-none" do %>
+        
           <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
 
             <%= booking.lambo.model%>
             <%= booking.status %>
-
-          </div>
-        <%# <% end %>
+         
       </div>
     <% end %>
   </div>

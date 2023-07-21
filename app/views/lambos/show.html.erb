@@ -1,6 +1,52 @@
-<h1>Details of Lambo# <%= @lambo.id %></h1>
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= cl_image_tag @lambo.photos[0].key, crop: :fill, class: "d-block w-100"%>
+      <div class="carousel-caption d-none d-md-block">
+        <h5><%= @lambo.model %></h5>
+        <p><%= @lambo.year %></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= cl_image_tag @lambo.photos[1].key, crop: :fill, class: "d-block w-100"%>
+      <div class="carousel-caption d-none d-md-block">
+        <h5><%= @lambo.model %></h5>
+        <p><%= @lambo.year %></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= cl_image_tag @lambo.photos[2].key, crop: :fill, class: "d-block w-100"%>
+      <div class="carousel-caption d-none d-md-block">
+        <h5><%= @lambo.model %></h5>
+        <p><%= @lambo.year %></p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
-<div>Description: <%= @lambo.description %></div>
-<div>Email: <%= @lambo.user.email %></div>
 
-<%= link_to "Booking this car", new_lambo_booking_path(@lambo) %>
+<div class="container mb-3">
+<div class = "description_area mw-100 p-3 m-3 bg-black text-light fs-4 mb-3"><%= @lambo.description %></div>
+
+<div class = "description_area mw-100 p-3 m-3 bg-black text-light fs-4 mb-3">Price per day: <%= @lambo.price %>$</div>
+
+<div class = "text-center">
+<%= link_to "Booking this car", new_lambo_booking_path(@lambo), class: "btn btn-book mb-3" %>
+</div>
+
+<div class = "email text-center ">Please contact <%= @lambo.user.email %> if you have questions</div>
+
+</div>
