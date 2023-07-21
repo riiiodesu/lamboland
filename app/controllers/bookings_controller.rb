@@ -6,12 +6,16 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    @current_user = current_user
+    @lambo =Lambo.find(params[:lambo_id]
   end
 
   def create
+    @lambo = Lambo.find(params[:lambo_id])
     @booking = Booking.new(booking_params)
     @booking.user = current_user
+    @booking.lambo = @lambo
+    # lines 13 to 16 describe what is needed to create a booking
+
     if @booking.save
       redirect_to bookings_path
     else
