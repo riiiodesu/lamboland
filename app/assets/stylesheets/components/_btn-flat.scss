@@ -10,3 +10,16 @@
   background: #4D04C4;
   color: white;
 }
+
+.btn-book {
+  color: rgb(0, 0, 0);
+  padding: 12px 36px;
+  border-radius: 4px;
+  background: #aaff0b;
+  transition: background 0.3s ease;
+}
+
+.btn-book:hover {
+  background: #cff72e;
+  color: rgb(0, 0, 0);
+}
