@@ -1,7 +1,28 @@
-<h1>Details of Lambo# <%= @lambo.id %></h1>
+<div class="card-trip">
 
-<div>Description: <%= @lambo.description %></div>
-<div>Email: <%= @lambo.user.email %></div>
-<%= cl_image_tag @lambo.photo.key, height: 300, width: 400, crop: :fill %>
+<% random_lambo = ["photo-1580414057403-c5f451f30e1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+"photo-1519245659620-e859806a8d3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+"photo-1507767439269-2c64f107e609?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+"photo-1578656415093-e7e19e5e132b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=766&q=80",
+"photo-1566024164372-0281f1133aa6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80"]  %>
+<% lambo_sample = random_lambo.sample  %>
 
+  <img src="https://images.unsplash.com/<%="#{lambo_sample}"%>"/>
+<div class="card-trip-infos">
+
+    <div>
+      <h2>Lambo Details</h2>
+      <p>"You surely have a great taste!"...Ryo, Kathryn and Joe</p>
+    </div>
+    <h2 class="card-trip-pricing">£2999.99</h2>
+    <img src="https://avatars.githubusercontent.com/u/43486658?v=4" class="card-trip-user avatar-bordered" />
+  </div>
+</div>
+
+<br>
+
+<div class="container">
+  <div>Description: <%= @lambo.description %></div>
+  <div>Email: <%= @lambo.user.email %></div>
 <%= link_to "Booking this car", new_lambo_booking_path(@lambo) %>
+</div>
