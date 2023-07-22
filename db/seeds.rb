@@ -48,3 +48,14 @@ lambo3.photos.attach(io: lambo3_image1, filename: "picture")
 lambo3.photos.attach(io: lambo3_image2, filename: "picture")
 lambo3.photos.attach(io: lambo3_image3, filename: "picture")
 lambo3.save
+
+
+lambo4 = Lambo.create!(model: "Revuelto", price: 9000000, year: 2022, description: "Just before the 60th anniversary of the marque, Lamborghini unveiled Revuelto, the first HPEV (High Performance Electrified Vehicle) hybrid super sports car. With the Revuelto, Lamborghini has established a new benchmark in performance, on-board technology, and driving pleasure. ", user: user1)
+
+lambo4_image1 = URI.open("https://res.cloudinary.com/dk5rblvf2/image/upload/v1690009943/daniel-lincoln-KKebd8YOX84-unsplash_jmh6li.jpg")
+lambo4_image2 = URI.open("https://res.cloudinary.com/dk5rblvf2/image/upload/v1690009943/thomas-haas-S5o_y8XM7yI-unsplash_vwntf1.jpg")
+lambo4_image3 = URI.open("https://res.cloudinary.com/dk5rblvf2/image/upload/v1690009943/miquel-parera-pyGfnlF12uI-unsplash_s7g3ti.jpg")
+lambo4.photos.attach(io: lambo4_image1, filename: "picture")
+lambo4.photos.attach(io: lambo4_image2, filename: "picture")
+lambo4.photos.attach(io: lambo4_image3, filename: "picture")
+lambo4.save
