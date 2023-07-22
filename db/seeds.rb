@@ -16,7 +16,7 @@ user1 = User.create!(
   password: "password"
 )
 
-lambo1 = Lambo.create!(model: "Aventador", price: 5000000, year: 2021, description: "This is an amazing car. DESIGNED TO PUSH BEYOND PERFORMANCE
+lambo1 = Lambo.create!(model: "Aventador", price: 5000, year: 2021, description: "This is an amazing car. DESIGNED TO PUSH BEYOND PERFORMANCE
   Revolutionary thinking is at the heart of every idea from Automobili Lamborghini. Whether it is aerospace-inspired design or technologies applied to the naturally aspirated V12 engine or carbon-fiber structure, going beyond accepted limits is part of our philosophy.", user: user1)
 
 lambo1_image1 = URI.open("https://source.unsplash.com/h1I6_kwAtLU")
@@ -28,7 +28,7 @@ lambo1.photos.attach(io: lambo1_image3, filename: "picture")
 lambo1.save
 
 
-lambo2 = Lambo.create!(model: "Aventador", price: 3000000, year: 2002, description: "Woohoooo...you will LOVE this ride!!", user: user1)
+lambo2 = Lambo.create!(model: "Aventador", price: 3000, year: 2002, description: "Woohoooo...you will LOVE this ride!!", user: user1)
 
 lambo2_image1 = URI.open("https://source.unsplash.com/eZQeLcpgTyw")
 lambo2_image2 = URI.open("https://source.unsplash.com/oefX48E9Qck")
@@ -39,7 +39,7 @@ lambo2.photos.attach(io: lambo2_image3, filename: "picture")
 lambo2.save
 
 
-lambo3 = Lambo.create!(model: "Revuelto", price: 9000000, year: 2022, description: "Just before the 60th anniversary of the marque, Lamborghini unveiled Revuelto, the first HPEV (High Performance Electrified Vehicle) hybrid super sports car. With the Revuelto, Lamborghini has established a new benchmark in performance, on-board technology, and driving pleasure. ", user: user1)
+lambo3 = Lambo.create!(model: "Revuelto", price: 9000, year: 2022, description: "Just before the 60th anniversary of the marque, Lamborghini unveiled Revuelto, the first HPEV (High Performance Electrified Vehicle) hybrid super sports car. With the Revuelto, Lamborghini has established a new benchmark in performance, on-board technology, and driving pleasure. ", user: user1)
 
 lambo3_image1 = URI.open("https://source.unsplash.com/PlhpEa-WG6E")
 lambo3_image2 = URI.open("https://source.unsplash.com/VsXHzSdwuik")
@@ -49,7 +49,7 @@ lambo3.photos.attach(io: lambo3_image2, filename: "picture")
 lambo3.photos.attach(io: lambo3_image3, filename: "picture")
 lambo3.save
 
-lambo4 = Lambo.create!(model: "Revuelto", price: 9000000, year: 2022, description: "Just before the 60th anniversary of the marque, Lamborghini unveiled Revuelto, the first HPEV (High Performance Electrified Vehicle) hybrid super sports car. With the Revuelto, Lamborghini has established a new benchmark in performance, on-board technology, and driving pleasure. ", user: user1)
+lambo4 = Lambo.create!(model: "Revuelto", price: 9000, year: 2022, description: "Just before the 60th anniversary of the marque, Lamborghini unveiled Revuelto, the first HPEV (High Performance Electrified Vehicle) hybrid super sports car. With the Revuelto, Lamborghini has established a new benchmark in performance, on-board technology, and driving pleasure. ", user: user1)
 
 lambo4_image1 = URI.open("https://source.unsplash.com/S5o_y8XM7yI")
 lambo4_image2 = URI.open("https://source.unsplash.com/KKebd8YOX84")

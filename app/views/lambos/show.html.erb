@@ -56,7 +56,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <%= cl_image_tag @lambo.photos[2].key, crop: :fill, class: "d-block w-100 carousel_images"%>
+      <%= cl_image_tag @lambo.photos[2].key, crop: :fill  , class: "d-block w-100 carousel_images"%>
       <div class="carousel-caption d-none d-md-block">
         <h5><%= @lambo.model %></h5>
         <p><%= @lambo.year %></p>
@@ -77,7 +77,7 @@
 <div class="container mb-3">
 <div class = "description_area mw-100 p-3 m-3 bg-black text-light fs-4 mb-3"><%= @lambo.description %></div>
 
-<div class = "description_area mw-100 p-3 m-3 bg-black text-light fs-4 mb-3">Price per day: <%= @lambo.price %>$</div>
+<div class = "description_area mw-100 p-3 m-3 bg-black text-light fs-4 mb-3">Price per day: $<%= @lambo.price %></div>
 
 <div class = "text-center">
 <%= link_to "Booking this car", new_lambo_booking_path(@lambo), class: "btn btn-book mb-3" %>
