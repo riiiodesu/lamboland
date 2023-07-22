@@ -6,7 +6,7 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    @lambo =Lambo.find(params[:lambo_id]
+    @lambo = Lambo.find(params[:lambo_id])
   end
 
   def create
