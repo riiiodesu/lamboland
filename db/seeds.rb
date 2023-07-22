@@ -16,7 +16,7 @@ user1 = User.create!(
   password: "password"
 )
 
-lambo1 = Lambo.create!(model: "Aventadol", price: 5000000, year: 1900, description: "This is amazing car. DESIGNED TO PUSH BEYOND PERFORMANCE
+lambo1 = Lambo.create!(model: "Aventador", price: 5000000, year: 2021, description: "This is an amazing car. DESIGNED TO PUSH BEYOND PERFORMANCE
   Revolutionary thinking is at the heart of every idea from Automobili Lamborghini. Whether it is aerospace-inspired design or technologies applied to the naturally aspirated V12 engine or carbon-fiber structure, going beyond accepted limits is part of our philosophy.", user: user1)
 
 lambo1_image1 = URI.open("https://res.cloudinary.com/dk5rblvf2/image/upload/v1689956018/development/ymh2bgtuuoo1s3md2i5yrdrnbfjy.jpg")
@@ -28,7 +28,7 @@ lambo1.photos.attach(io: lambo1_image3, filename: "picture")
 lambo1.save
 
 
-lambo2 = Lambo.create!(model: "Aventadol", price: 3000000, year: 2002, description: "This is supercar, you love", user: user1)
+lambo2 = Lambo.create!(model: "Aventador", price: 3000000, year: 2002, description: "Woohoooo...you will LOVE this ride!!", user: user1)
 
 lambo2_image1 = URI.open("https://res.cloudinary.com/dk5rblvf2/image/upload/v1689995394/production/vdowuiyckq9lwy9httaijhs23ggg.jpg")
 lambo2_image2 = URI.open("https://res.cloudinary.com/dk5rblvf2/image/upload/v1689995392/production/voou8q7gzllyo794quiz1dcr9lm2.jpg")
