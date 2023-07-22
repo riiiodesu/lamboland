@@ -42,21 +42,21 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <%= cl_image_tag @lambo.photos[0].key, crop: :fill, class: "d-block w-100"%>
+      <%= cl_image_tag @lambo.photos[0].key,crop: :fill,class: "d-block w-100 carousel_images"%>
       <div class="carousel-caption d-none d-md-block">
         <h5><%= @lambo.model %></h5>
         <p><%= @lambo.year %></p>
       </div>
     </div>
     <div class="carousel-item">
-      <%= cl_image_tag @lambo.photos[1].key, crop: :fill, class: "d-block w-100"%>
+      <%= cl_image_tag @lambo.photos[1].key, crop: :fill, class: "d-block w-100 carousel_images"%>
       <div class="carousel-caption d-none d-md-block">
         <h5><%= @lambo.model %></h5>
         <p><%= @lambo.year %></p>
       </div>
     </div>
     <div class="carousel-item">
-      <%= cl_image_tag @lambo.photos[2].key, crop: :fill, class: "d-block w-100"%>
+      <%= cl_image_tag @lambo.photos[2].key, crop: :fill, class: "d-block w-100 carousel_images"%>
       <div class="carousel-caption d-none d-md-block">
         <h5><%= @lambo.model %></h5>
         <p><%= @lambo.year %></p>
