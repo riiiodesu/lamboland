@@ -1,3 +1,39 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to "#", class: "navbar-brand" do %>
+      <%= image_tag "https://source.unsplash.com/ze5wHM9kplc" %>
+    <% end %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <%# if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "My bookings", bookings_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Add Lambos", new_lambo_path(@current_user), class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+            </div>
+          </li>
+        <%# else %>
+          <!--li class="nav-item"-->
+            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <!--/li-->
+        <%# end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <div id="carouselExampleCaptions" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -6,21 +42,21 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <%= cl_image_tag @lambo.photos[0].key, crop: :fill, class: "d-block w-100"%>
+      <%= cl_image_tag @lambo.photos[0].key,crop: :fill,class: "d-block w-100 carousel_images"%>
       <div class="carousel-caption d-none d-md-block">
         <h5><%= @lambo.model %></h5>
         <p><%= @lambo.year %></p>
       </div>
     </div>
     <div class="carousel-item">
-      <%= cl_image_tag @lambo.photos[1].key, crop: :fill, class: "d-block w-100"%>
+      <%= cl_image_tag @lambo.photos[1].key, crop: :fill, class: "d-block w-100 carousel_images"%>
       <div class="carousel-caption d-none d-md-block">
         <h5><%= @lambo.model %></h5>
         <p><%= @lambo.year %></p>
       </div>
     </div>
     <div class="carousel-item">
-      <%= cl_image_tag @lambo.photos[2].key, crop: :fill, class: "d-block w-100"%>
+      <%= cl_image_tag @lambo.photos[2].key, crop: :fill, class: "d-block w-100 carousel_images"%>
       <div class="carousel-caption d-none d-md-block">
         <h5><%= @lambo.model %></h5>
         <p><%= @lambo.year %></p>
