@@ -14,4 +14,5 @@ Rails.application.routes.draw do
     resources :bookings, only: [:index, :edit]
     resources :lambos, only: :index
   end
+
 end

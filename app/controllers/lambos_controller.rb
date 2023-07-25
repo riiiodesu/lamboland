@@ -1,6 +1,4 @@
 class LambosController < ApplicationController
-  # before_action :set_user, only: %i[new create]
-
   def index
     @lambos = policy_scope(Lambo)
   end
@@ -29,8 +27,4 @@ class LambosController < ApplicationController
   def lambo_params
     params.require(:lambo).permit(:model, :year, :price, :description, photos: [])
   end
-    # not sure if below is required
-    # def set_user
-    #   @user = User.find(params[:user_id])
-    # end
 end

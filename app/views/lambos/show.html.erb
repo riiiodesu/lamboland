@@ -10,7 +10,6 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <%# if user_signed_in? %>
           <li class="nav-item active">
             <%= link_to "My bookings", bookings_path, class: "nav-link" %>
           </li>
@@ -24,11 +23,6 @@
               <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
-        <%# else %>
-          <!--li class="nav-item"-->
-            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-          <!--/li-->
-        <%# end %>
       </ul>
     </div>
   </div>
@@ -75,14 +69,20 @@
 
 
 <div class="container mb-3">
-<div class = "description_area mw-100 p-3 m-3 bg-black text-light fs-4 mb-3"><%= @lambo.description %></div>
-
-<div class = "description_area mw-100 p-3 m-3 bg-black text-light fs-4 mb-3">Price per day: $<%= @lambo.price %></div>
-
+  <div class = "description_area mw-100 p-3 m-3 bg-black text-light fs-4 mb-3"><%= @lambo.description %></div>
+  <div class = "description_area mw-100 p-3 m-3 bg-black text-light fs-4 mb-3">Price per day: $<%= @lambo.price %></div>
 <div class = "text-center">
-<%= link_to "Booking this car", new_lambo_booking_path(@lambo), class: "btn btn-book mb-3" %>
+  <%= link_to "Reserve", new_lambo_booking_path(@lambo), class: "btn btn-book mb-3" %>
+</div>
+<%# <div class = "email text-center ">Please contact <%= @lambo.user.email  if you have questions</div> %>
 </div>
 
-<div class = "email text-center ">Please contact <%= @lambo.user.email %> if you have questions</div>
-
+<div class="container">
+<div class="row">
+<div class="col-md-12 text-end">
+  <div class="footer-copyright">
+    <i class="fa-regular fa-registered"></i> The WildBunch
+  </div>
+  </div>
+</div>
 </div>
