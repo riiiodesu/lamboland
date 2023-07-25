@@ -45,36 +45,41 @@
 <%= cl_image_tag booking.lambo.photos[0].key, class: "card-img-top", crop: :fill %>
   <div class="card-body">
     <h5 class="card-title">Booking Details</h5>
-      <p class="card-text"><%= booking.lambo.model%></p>
-      <p class="card-text"><%= booking.status%></p>
-      <%= link_to edit_owner_booking_path(booking.lambo_id), class: 'btn btn-light btn-sm border' do %>
-      <i class="fa fa-pencil">Approve</i>
-      <% end %>
-      <%= link_to edit_owner_booking_path(booking.lambo_id), class: 'btn btn-light btn-sm border' do %>
-      <i class="fa fa-pencil">Reject</i>
-      <% end %>
+      <p class="card-text">Model: <%= booking.lambo.model%></p>
+      <p class="card-text">Status: <%= booking.status%></p>
+      <p class="card-text"><%= booking.start_date.strftime ('%b %d,%l:%M %p') %> - <%= booking.end_date.strftime ('%b %d,%l:%M %p') %></p>
+
+<div class="booking-actions">
+    <% if booking.pending? %>
+    <%= simple_form_for booking do |f| %>
+    <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
+    <%= f.submit 'Accept', class: 'btn btn-info' %>
+    <% end %>
+    <%= simple_form_for booking do |f| %>
+    <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
+    <%= f.submit 'Reject', class: 'btn btn-light' %>
+    <% end %>
+    <% else %>
+    <p class='booking-tag'><%= booking.status %></p>
+    <% end %>
+</div>
+
   </div>
 </div>
 </div>
 <% end %>
 </div>
 
+</div>
+<% end %>
 
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  </div>
 
+<div class="container">
+<div class="row">
+<div class="col-md-12 text-end">
   <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+    <i class="fa-regular fa-registered"></i> The WildBunch
   </div>
-
-
-
+  </div>
 </div>
-<% end %>
+</div>

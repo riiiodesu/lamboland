@@ -7,6 +7,7 @@ class Owner::BookingsController < ApplicationController
   end
 
   def update
+    @booking = Booking.find(params[:lambo_id])
     if @booking.update(booking_params)
       redirect_to booking_path(@booking)
     else
