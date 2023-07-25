@@ -3,19 +3,14 @@
     <%= link_to "#", class: "navbar-brand" do %>
       <%= image_tag "https://source.unsplash.com/ze5wHM9kplc" %>
     <% end %>
-
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <%# if user_signed_in? %>
           <li class="nav-item active">
             <%= link_to "My Booking", bookings_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%#= link_to "Add Lambos", new_lambo_path(@current_user), class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -24,34 +19,34 @@
               <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
-        <%# else %>
-          <!--li class="nav-item"-->
-            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-          <!--/li-->
-        <%# end %>
       </ul>
     </div>
   </div>
 </div>
-
 
 <div class="container">
  <div class="row">
     <div class="col-12 col-md-10 offset-lg-1">
       <div class="bg-white rounded p-3 shadow">
       <%= cl_image_tag @lambo.photos[0].key, height: 300,  crop: :fill, class: "w-100 object-fit-cover"%>
-
-
-        <%# <h3>Create a New Booking </h3> %>
-
-        <%= simple_form_for [@lambo, @booking] do |f| %>
-
-          <%= f.input :start_date %>
-          <%= f.input :end_date %>
-          <%# <%= f.input :lambo_id %>
+      <%= simple_form_for [@lambo, @booking] do |f| %>
+          <%= f.input :start_date, html5: true %>
+          <%= f.input :end_date, html5: true %>
           <%= f.submit class: 'btn btn-flat' %>
         <% end %>
       </div>
     </div>
   </div>
+</div>
+
+<br>
+
+<div class="container">
+ <div class="row">
+  <div class="col-md-12 text-end">
+   <div class="footer-copyright">
+    <i class="fa-regular fa-registered"></i> The WildBunch
+   </div>
+  </div>
+ </div>
 </div>

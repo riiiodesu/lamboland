@@ -7,7 +7,7 @@ class Owner::BookingsController < ApplicationController
   end
 
   def update
-    @booking = Booking.find(params[:lambo_id])
+    @booking = Booking.find(params[:id])
     if @booking.update(booking_params)
       redirect_to booking_path(@booking)
     else
@@ -20,5 +20,4 @@ class Owner::BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:start_date, :end_date, :status, :user_id, :lambo_id)
   end
-
 end

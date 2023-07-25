@@ -11,7 +11,8 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create, :index]
   end
   namespace :owner do
-    resources :bookings, only: [:index, :edit, :update]
+    resources :bookings, only: [:index, :edit]
     resources :lambos, only: :index
   end
+
 end

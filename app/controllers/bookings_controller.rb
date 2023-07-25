@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-
   def index
     @bookings = Booking.all
   end
@@ -15,11 +14,19 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.lambo = @lambo
     # lines 13 to 16 describe what is needed to create a booking
-
     if @booking.save
       redirect_to bookings_path
     else
       render :new, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    if @booking.update(booking_params)
+      redirect_to booking_path(@booking)
+    else
+      render :edit, status: :unprocessable_entity
     end
   end
 
