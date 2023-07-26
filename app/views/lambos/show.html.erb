@@ -67,13 +67,50 @@
   </button>
 </div>
 
-
 <div class="container mb-3">
-  <div class = "description_area mw-100 p-3 m-3 bg-black text-light fs-4 mb-3"><%= @lambo.description %></div>
-  <div class = "description_area mw-100 p-3 m-3 bg-black text-light fs-4 mb-3">Price per day: $<%= @lambo.price %></div>
-<div class = "text-center">
-  <%= link_to "Reserve", new_lambo_booking_path(@lambo), class: "btn btn-book mb-3" %>
+
+<div class="navbar-vanilla">
+
+    <% reviewers_list = {"Ben - Coding Lord" => image_tag("ben_kiwi.jpeg"),
+        "Juri - CSS Empress" => image_tag("juri.jpeg"),
+        "The Bowman - HTML Kung-Fu Master" => image_tag("bowman.jpeg"),
+        "Chris - JS Reality Bender" => image_tag("chris_sf.jpeg")} %>
+
+    <% reviewer_sample = reviewers_list.to_a %>
+    <% reviewer_sample2 = reviewer_sample.sample %>
+
+    <a class="navbar-vanilla-section" href="#">
+     <div class="navbar-vanilla-brand">" <%= @lambo.description %> "</div>
+    </a>
+    <div class="players"> <%= reviewer_sample2[0] %></div>
+    <div class="navbar-vanilla-section">
+      <div class="navbar-vanilla-profile">
+        <%=reviewer_sample2[1]%>
+      </div>
+    </div>
 </div>
+
+
+  <div class="item-flip" on:click={toggleFlip} class:flipped={isFlipped}>
+  <div class="item-flip-inner">
+    <div class="item-flip-front">
+      <div class="item-flip-content">
+        <h2>Price Per Day</h2>
+      </div>
+    </div>
+    <div class="item-flip-back">
+      <div class="item-flip-content">
+        <p>$<%= @lambo.price %></p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+  <div class = "text-center">
+    <%= link_to "Reserve", new_lambo_booking_path(@lambo), class: "btn btn-book mb-3" %>
+  </div>
 <%# <div class = "email text-center ">Please contact <%= @lambo.user.email  if you have questions</div> %>
 </div>
 

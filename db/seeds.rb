@@ -27,7 +27,7 @@ lambo1.photos.attach(io: lambo1_image3, filename: "picture")
 lambo1.save
 
 
-lambo2 = Lambo.create!(model: "Aventador", price: 3000, year: 2002, description: "You really know what you are doing. Pure bliss with that V12 Beast!!", user: user1)
+lambo2 = Lambo.create!(model: "Beast", price: 3000, year: 2002, description: "You really know what you are doing. Pure bliss with that V12 Beast!!", user: user1)
 
 lambo2_image1 = URI.open("https://source.unsplash.com/eZQeLcpgTyw")
 lambo2_image2 = URI.open("https://source.unsplash.com/oefX48E9Qck")
@@ -38,7 +38,7 @@ lambo2.photos.attach(io: lambo2_image3, filename: "picture")
 lambo2.save
 
 
-lambo3 = Lambo.create!(model: "Revuelto", price: 9000, year: 2022, description: "What this behemoth of a ride needed...YOU!!...send us photos from your ride! ", user: user1)
+lambo3 = Lambo.create!(model: "Revuelto", price: 9000, year: 2022, description: "What this behemoth of a ride needed...YOU!!...send us photos from your aventures in the road! ", user: user1)
 
 lambo3_image1 = URI.open("https://source.unsplash.com/PlhpEa-WG6E")
 lambo3_image2 = URI.open("https://source.unsplash.com/VsXHzSdwuik")
@@ -48,7 +48,7 @@ lambo3.photos.attach(io: lambo3_image2, filename: "picture")
 lambo3.photos.attach(io: lambo3_image3, filename: "picture")
 lambo3.save
 
-lambo4 = Lambo.create!(model: "Revuelto", price: 9000, year: 2022, description: "Urban Legends will be told about you and this car...let history be written! ", user: user1)
+lambo4 = Lambo.create!(model: "Widow", price: 9000, year: 2022, description: "Urban Legends will be told about you and this car...let history be written! ", user: user1)
 
 lambo4_image1 = URI.open("https://source.unsplash.com/S5o_y8XM7yI")
 lambo4_image2 = URI.open("https://source.unsplash.com/KKebd8YOX84")
