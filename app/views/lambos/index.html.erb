@@ -28,12 +28,14 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container　d-flex align-items-center justify-content-center">
   <div class="row">
     <% @lambos.each do |lambo| %>
       <div class="col-sm-12 col-md-6 mb-5">
         <div class="card">
-             <%= cl_image_tag lambo.photos[0].key, crop: :fill %>
+            <% num = 0  %>
+            <%= cl_image_tag lambo.photos[0].key, crop: :fill %>
+            <% end %>
             <div class="card-infos">
               <div>
                 <h2><%= lambo.model %></h2>
