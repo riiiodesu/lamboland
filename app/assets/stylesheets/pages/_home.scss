@@ -1,3 +1,29 @@
 // Specific CSS for your home-page
 @import "components/navbar";
 @import "components/btn-flat";
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  margin: 0;
+  padding: 0;
+}
+
+.bg-img {
+  background-image: url("https://source.unsplash.com/h1I6_kwAtLU");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.bg-img h1 {
+  color: white;
+}
+
+.bg-color {
+  background-color: black;
+}

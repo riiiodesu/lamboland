@@ -1,20 +1,26 @@
 <div class="container">
-<%= image_tag("lamboland logo.svg") %>
+<%# <%= image_tag("lamboland logo.svg") %>
 
-<h1>Lambos. On Demand.</h1>
-<h3>Need a Lambo?. We got you.</h2>
+  <div class="bg-img content d-flex align-items-center justify-content-center">
+      <h1 class="bg-color">Lambos. On Demand.</h1>
+  </div>
 
-<br>
 
-<br>
 
-<div>
-  <%= link_to "view lambos", lambos_path, class: "btn btn-flat" %>
-  <% if current_user%>
-    <%= link_to "Sign out", destroy_user_session_path, class: "btn btn-flat" %>
-  <% else current_user%>
-    <%= link_to "sign in", new_user_session_path , class: "btn btn-flat" %>
-  <% end %>
-</div>
+  <div>
+    <%= link_to "view lambos", lambos_path, class: "btn btn-flat" %>
+    <% if current_user%>
+      <%= link_to "Sign out", destroy_user_session_path, class: "btn btn-flat" %>
+    <% else current_user%>
+      <%= link_to "sign in", new_user_session_path , class: "btn btn-flat" %>
+    <% end %>
+  </div>
+
+  <div>
+    <% if current_user%>
+      <h3>For owner</h3>
+      <%= link_to "My lambos", owner_lambos_path , class: "btn btn-flat" %>
+    <% end %>
+  </div>
 
 </div>
