@@ -1,9 +1,11 @@
-<h1>New Lambo</h1>
+<div class="container m-5">
+<h1>Add your lambo to share</h1>
 <%= simple_form_for [@lambo] do |f| %>
-  <%= f.input :model %>
+  <%= f.input :model, class: "w-50"%>
   <%= f.input :year %>
   <%= f.input :price %>
   <%= f.input :description %>
   <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= f.submit "Submit review", class: "btn btn-primary" %>
+  <%= f.submit "Add", class: "btn btn-flat mt-3" %>
 <% end %>
+</div>

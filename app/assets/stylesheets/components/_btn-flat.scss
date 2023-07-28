@@ -23,3 +23,29 @@
   background: #cff72e;
   color: rgb(0, 0, 0);
 }
+
+.btn-owner {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #000000;
+  transition: background 0.3s ease;
+}
+
+.btn-owner:hover {
+  background: #444444;
+  color: rgb(255, 255, 255);
+}
+
+.btn-main {
+  color: rgb(0, 0, 0);
+  padding: 16px 32px;
+  border-radius: 4px;
+  background: #aaff0b;
+  transition: background 0.3s ease;
+}
+
+.btn-main:hover {
+  background: #cff72e;
+  color: rgb(0, 0, 0);
+}
