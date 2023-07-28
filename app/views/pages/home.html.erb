@@ -6,6 +6,7 @@
   <div>
     <%= link_to "Find your lambos", lambos_path, class: "btn btn-main lambos mb-5" %>
   </div>
+
   <div>
     <% if current_user%>
       <%= link_to "Sign out", destroy_user_session_path, class: "btn btn-flat sign mb-5" %>
@@ -25,11 +26,6 @@
   # </div> %>
 
 
-
-
-
-
-
 <ul id="results" class="list-group list-group-horizontal"></ul>
 <div class="row">
   <div class="col pt-1">
@@ -37,4 +33,5 @@
       Click me!
     </button>
   </div>
+</div>
 </div>
