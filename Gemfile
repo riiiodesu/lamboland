@@ -30,6 +30,9 @@ gem "jbuilder"
 #add gem "pundit"
 gem "pundit"
 
+# aee gem "geocoder"
+gem "geocoder"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

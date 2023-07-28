@@ -12,7 +12,12 @@ Lambo.destroy_all
 User.destroy_all
 
 user1 = User.create!(
-  email: "hogehogeh@gmail.com",
+  email: "hoge1@gmail.com",
+  password: "password"
+)
+
+user2 = User.create!(
+  email: "hoge2@gmail.com",
   password: "password"
 )
 
@@ -48,7 +53,7 @@ lambo3.photos.attach(io: lambo3_image2, filename: "picture")
 lambo3.photos.attach(io: lambo3_image3, filename: "picture")
 lambo3.save
 
-lambo4 = Lambo.create!(model: "Widow", price: 9000, year: 2022, description: "Urban Legends will be told about you and this car...let history be written! ", user: user1)
+lambo4 = Lambo.create!(model: "Widow", price: 9000, year: 2022, description: "Urban Legends will be told about you and this car...let history be written! ", user: user2)
 
 lambo4_image1 = URI.open("https://source.unsplash.com/S5o_y8XM7yI")
 lambo4_image2 = URI.open("https://source.unsplash.com/KKebd8YOX84")
@@ -57,3 +62,23 @@ lambo4.photos.attach(io: lambo4_image1, filename: "picture")
 lambo4.photos.attach(io: lambo4_image2, filename: "picture")
 lambo4.photos.attach(io: lambo4_image3, filename: "picture")
 lambo4.save
+
+lambo5 = Lambo.create!(model: "Gallardo", price: 5000, year: 2010, description: "The Gallardo is the best selling Lamborghini ever with over 14k units sold from 2003 till 2013. Feel lambo now!", user: user2)
+
+lambo5_image1 = URI.open("https://source.unsplash.com/Ee2p3HV_liA")
+lambo5_image2 = URI.open("https://source.unsplash.com/dnRfgaxfHj0")
+lambo5_image3 = URI.open("https://source.unsplash.com/L0MJaqt3euw")
+lambo5.photos.attach(io: lambo5_image1, filename: "picture")
+lambo5.photos.attach(io: lambo5_image2, filename: "picture")
+lambo5.photos.attach(io: lambo5_image3, filename: "picture")
+lambo5.save
+
+lambo6 = Lambo.create!(model: "Miura", price: 3000, year: 1965, description: "Feel the legacy of Lamborghini", user: user2)
+
+lambo6_image1 = URI.open("https://source.unsplash.com/dt5Q6PTcIdE")
+lambo6_image2 = URI.open("https://source.unsplash.com/1w9vIC1Rt7o")
+lambo6_image3 = URI.open("https://source.unsplash.com/qGgHvnUuwag")
+lambo6.photos.attach(io: lambo6_image1, filename: "picture")
+lambo6.photos.attach(io: lambo6_image2, filename: "picture")
+lambo6.photos.attach(io: lambo6_image3, filename: "picture")
+lambo6.save

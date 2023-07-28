@@ -24,17 +24,46 @@
   color: rgb(0, 0, 0);
 }
 
+.btn-book-2 {
+    padding: 20px 100px;
+    display: inline-block;
+    color: #000000;
+    text-decoration :none;
+    text-align: center;
+    background: #aaff0b;
+    transition: .4s;
+
+    /*--水平方向 垂直方向 影のぼかし 色--*/
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+
+    /*--角丸指定--*/
+    border-radius: 100vh;
+  }
+
+.btn-book-2:hover {
+
+    /*--水平方向 垂直方向 色--*/
+    box-shadow: 0 0 10px rgba(0,0,0,0);
+    background: #7f9c0c;
+}
+
+
 .btn-owner {
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 8px 24px;
   border-radius: 4px;
-  background: #000000;
-  transition: background 0.3s ease;
+  background: gold;
+  transition: .4s;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+
+  /*--角丸指定--*/
+  border-radius: 100vh;
 }
 
 .btn-owner:hover {
-  background: #444444;
-  color: rgb(255, 255, 255);
+  background: silver;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 0 10px rgba(0,0,0,0);
 }
 
 .btn-main {
@@ -42,10 +71,57 @@
   padding: 16px 32px;
   border-radius: 4px;
   background: #aaff0b;
-  transition: background 0.3s ease;
+    transition: .4s;
+
+    /*--水平方向 垂直方向 影のぼかし 色--*/
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+
+    /*--角丸指定--*/
+    border-radius: 100vh;
 }
 
 .btn-main:hover {
   background: #cff72e;
+  box-shadow: 0 0 10px rgba(0,0,0,0);
+  color: rgb(0, 0, 0);
+}
+
+.btn-sign {
+  color: rgb(0, 0, 0);
+  padding: 16px 32px;
+  border-radius: 4px;
+  background: #797979;
+    transition: .4s;
+
+    /*--水平方向 垂直方向 影のぼかし 色--*/
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+
+    /*--角丸指定--*/
+    border-radius: 100vh;
+}
+
+.btn-sign:hover {
+  background: #3c3c3c;
+  box-shadow: 0 0 10px rgba(0,0,0,0);
+  color: rgb(0, 0, 0);
+}
+
+.btn-back {
+  color: rgb(0, 0, 0);
+  padding: 8px 24px;
+  border-radius: 1px;
+  background: #797979;
+    transition: .4s;
+
+    /*--水平方向 垂直方向 影のぼかし 色--*/
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+
+    /*--角丸指定--*/
+    border-radius: 100vh;
+}
+
+.btn-back:hover {
+  background: #3c3c3c;
+  box-shadow: 0 0 10px rgba(0,0,0,0);
   color: rgb(0, 0, 0);
 }
