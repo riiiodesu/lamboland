@@ -1,5 +1,24 @@
-<div class="container">
-<%= image_tag("lamboland logo.svg") %>
+<div class="container d-flex align-items-center justify-content-center">
+  <%= image_tag("lamboland logo.svg") %>
+</div>
+
+<div class="container text-center m-5">
+  <div>
+    <%= link_to "Find your lambos", lambos_path, class: "btn btn-main lambos mb-5" %>
+  </div>
+  <div>
+    <% if current_user%>
+      <%= link_to "Sign out", destroy_user_session_path, class: "btn btn-flat sign mb-5" %>
+    <% else current_user%>
+      <%= link_to "sign in", new_user_session_path , class: "btn btn-flat sign mb-5" %>
+    <% end %>
+  </div>
+    <div>
+    <% if current_user%>
+      <%= link_to "owner's page", owner_lambos_path , class: "btn btn-owner" %>
+    <% end %>
+  </div>
+</div>
 
   <%# # <div class="bg-img content d-flex align-items-center justify-content-center">
   #     <h1 class="bg-color">Lambos. On Demand.</h1>
@@ -7,29 +26,14 @@
 
 
 
-  <div>
-    <%= link_to "view lambos", lambos_path, class: "btn btn-flat" %>
-    <% if current_user%>
-      <%= link_to "Sign out", destroy_user_session_path, class: "btn btn-flat" %>
-    <% else current_user%>
-      <%= link_to "sign in", new_user_session_path , class: "btn btn-flat" %>
-    <% end %>
-  </div>
 
-  <div>
-    <% if current_user%>
-      <h3>For owner</h3>
-      <%= link_to "My lambos", owner_lambos_path , class: "btn btn-flat" %>
-    <% end %>
-  </div>
 
-</div>
 
 
 <ul id="results" class="list-group list-group-horizontal"></ul>
 <div class="row">
   <div class="col pt-1">
-    <button class="btn btn-primary btn-lg" data-controller="">
+    <button class="btn btn-primary btn-lg" data-controller="hello" data-action="click->hello#click">
       Click me!
     </button>
   </div>
