@@ -28,16 +28,18 @@
   </div>
 </div>
 
+<div class="container m-2">
+
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-sm-8 my-3">
       <%= form_with url: lambos_path, method: :get, class: "d-flex" do %>
         <%= text_field_tag :query,
               params[:query],
-              class: "form-control",
-              placeholder: "Type a keyword"
+              class: "form-control form-control-lg mb-4",
+              placeholder: "Type the model or preference"
           %>
-        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+        <%= submit_tag "Search", name: "", class: "btn btn-flat mb-4" %>
       <% end %>
     </div>
   </div>
@@ -54,10 +56,16 @@
                 <h2><%= lambo.model %></h2>
                 <p class="card-pricing">per day: $<%= lambo.price %></p>
               </div>
-              <%= link_to "Check Details", lambo_path(lambo), class: "btn btn-flat" %>
+              <%= link_to "Details", lambo_path(lambo), class: "btn btn-flat" %>
             </div>
         </div>
       </div>
     <% end %>
   </div>
+</div>
+
+<div class="text-center">
+  <%= link_to "Back", root_path , class: "btn btn-back" %>
+</div>
+
 </div>

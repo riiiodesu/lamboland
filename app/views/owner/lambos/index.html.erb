@@ -1,6 +1,6 @@
 <h1>My lambos</h1>
 
-<div class="container">
+<div class="container m-5">
   <div class="row">
     <% @lambos.each do |lambo| %>
       <div class="col-sm-12 col-md-6 mb-5">
@@ -10,7 +10,8 @@
               <div>
                 <h2><%= lambo.model %></h2>
                 <p class="card-pricing">per day: $<%= lambo.price %></p>
-                  <p><% @bookings.each do |booking| %>
+                  <% if @bookings %>
+                  <% @bookings.each do |booking| %>
                     <% if booking.lambo_id === lambo.id %>
                       <% status = booking.status %>
                         <% if status === "pending" %>
@@ -18,13 +19,19 @@
                         <% else %>
                           <%= booking.status %>
                         <% end %>
-                    <% end %>
+                     <% end %>
                   <% end %>
-                  </p>
+                  <% else %>
+                    <p>Not booked yet</p>
+                  <% end %>
               </div>
             </div>
         </div>
       </div>
     <% end %>
+  </div>
+  <div>
+    <%= link_to "Add Lambos", new_lambo_path(@current_user), class: "nav-link btn btn-owner mb-10" %>
+    <%= link_to "Back", root_path , class: "btn btn-back mt-3" %>
   </div>
 </div>
