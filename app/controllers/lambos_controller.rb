@@ -1,7 +1,12 @@
 class LambosController < ApplicationController
-  def index
-    @lambos = policy_scope(Lambo)
-  end
+    # @lambos = policy_scope(Lambo)
+    def index
+      @lambos = policy_scope(Lambo)
+      if params[:query].present?
+        sql_subquery = "model ILIKE :query OR description ILIKE :query"
+        @lambos = @lambos.where(sql_subquery, query: "%#{params[:query]}%")
+      end
+    end
 
   def new
     @lambo = Lambo.new
