@@ -3,12 +3,16 @@
   padding: 8px 24px;
   border-radius: 4px;
   background: #670BFF;
-  transition: background 0.3s ease;
+  transition: .4s;
+
+  /*--水平方向 垂直方向 影のぼかし 色--*/
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
 }
 
 .btn-flat:hover {
   background: #4D04C4;
   color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0);
 }
 
 .btn-book {
