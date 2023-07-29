@@ -13,7 +13,7 @@
       <ul class="navbar-nav me-auto">
         <%# if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "My Bookings", bookings_path, class: "nav-link" %>
+            <%= link_to "My Lambos", owner_lambos_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%#= link_to "Add Lambos", new_lambo_path(@current_user), class: "nav-link" %>
@@ -48,20 +48,20 @@
       <p class="card-text">Model: <%= booking.lambo.model%></p>
       <p class="card-text">Status: <%= booking.status%></p>
       <p class="card-text">Cost: $<%= booking.lambo.price %></p>
-      <p class="card-text">Duration: <%= booking.start_date.strftime ('%b %d,%l:%M %p') %> - <%= booking.end_date.strftime ('%b %d,%l:%M %p') %></p>
+      <p class="card-text">Duration: <%= booking.start_date.strftime ('%b %d, %l:%M %p') %> - <%= booking.end_date.strftime ('%b %d, %l:%M %p') %></p>
 
 <div class="booking-actions">
     <% if booking.pending? %>
     <%= simple_form_for booking do |f| %>
-    <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
+    <%= f.input :status, as: :hidden, input_html: { value: 'Accepted'} %>
     <%= f.submit 'Accept', class: 'btn btn-info' %>
     <% end %>
     <%= simple_form_for booking do |f| %>
-    <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
+    <%= f.input :status, as: :hidden, input_html: { value: 'Rejected'} %>
     <%= f.submit 'Reject', class: 'btn btn-light' %>
     <% end %>
     <% else %>
-    <p class='booking-tag'><%= booking.status %></p>
+    <p class='booking-tag'><% booking.status %></p>
     <% end %>
 </div>
 

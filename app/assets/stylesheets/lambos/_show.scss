@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: white;
+  margin: 3%;
 }
 
 .navbar-vanilla a {
@@ -18,8 +19,8 @@
 }
 
 .navbar-vanilla-section {
-  display: flex;
-  align-items: left;
+  // display: flex;
+  // align-items: left;
 }
 
 .navbar-vanilla-logo {
@@ -31,9 +32,11 @@
 }
 
 .navbar-vanilla-brand {
-  margin: 5;
-  padding-left: 10%;
-  margin-left: 10%;
+  // margin: 5;
+  padding-left: 5%;
+  // margin-left: 10%;
+font-size: 20px;
+
 }
 
 .navbar-vanilla-menu a {
@@ -47,8 +50,10 @@
 }
 
 .players {
+  display: flex;
   text-align: right;
-  font-size: 50%;
+  align-items: center;
+  font-size: 100%;
 }
 
 .navbar-vanilla-profile img {
@@ -93,78 +98,4 @@
   .navbar-vanilla-menu {
     display: none;
   }
-}
-
-.item-flip {
-  /*customizable*/
-  height: 120px;
-  width: 700px;
-  max-width: 100%;
-}
-
-.item-flip-inner {
-  /*fixed*/
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.item-flip h2 {
-  /*customizable*/
-  margin: 50;
-  text-align: center;
-  font-size: 100%;
-}
-
-.item-flip p {
-  /*customizable*/
-  margin: 50;
-  text-align: center;
-  font-size: 100%;
-}
-
-.item-flip-front, .item-flip-back {
-  /*fixed*/
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-grow: 1;
-  margin-top: 5%;
-  padding-top: 2%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 75%;
-  height: 75%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  /*customizable*/
-  border-radius: 16px;
-  box-shadow: 0 0 16px rgba(0,0,0,0.3);
-  background-color: rgba(206, 203, 203, 0.38);
-}
-
-.text-center {
-  padding-top: 5%;
-}
-
-.item-flip-content {
-  padding-inline: 8px;
-}
-
-.item-flip-back {
-  transform: rotateX(180deg);
-}
-
-.item-flip.flipped .item-flip-inner {
-  transform: rotateX(180deg);
-}
-
-/* De-activate card hover style for mobiles */
-@media (min-width: 1100px) {
-  .item-flip:hover .item-flip-inner {
-  transform: rotateX(180deg);
-}
 }
