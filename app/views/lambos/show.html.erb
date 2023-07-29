@@ -16,6 +16,9 @@
           <li class="nav-item">
             <%= link_to "Add Lambos", new_lambo_path(@current_user), class: "nav-link" %>
           </li>
+          <li class="nav-item">
+            <%= link_to "My Lambos", owner_lambos_path(@current_user), class: "nav-link" %>
+          </li>
           <li class="nav-item dropdown">
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>
@@ -67,10 +70,33 @@
   </button>
 </div>
 
-<div class="navbar-vanilla">
+<%# <div class="navbar-vanilla"> %>
+    <%# <% reviewers_list = {"Ben - Coding Lord" => image_tag("ben_kiwi.jpeg"),
+        "Juri - CSS Empress" => image_tag("juri.jpeg"),
+        "The Bowman - HTML Kung-Fu Master" => image_tag("bowman.jpeg"),
+        "Chris - JS Reality Bender" => image_tag("chris_sf.jpeg")} %>
+<%#
+    <%  reviewer_sample = reviewers_list.to_a %>
+    <%# <%  reviewer_sample2 = reviewer_sample.sample %>
 
+    <%# <% randome_review = ["You really know what you are doing...Enjoy the Ride!", "People will remember your name!", %>
+    <%# "That V12 engine is all you need!", "Your life is complete now!"] %> %>
+    <%# <% randome = randome_review.sample %>
+<%# <div class="navbar-vanilla-brand" >" <%= randome</div> %>
+    <%# <div class="navbar-vanilla-section"> %>
 
-</div>
+    <%# </div> %>
+    <%# <div class="navbar-vanilla-section">
+
+       <div class="navbar-vanilla-section">
+        <div class="players"> <%= reviewer_sample2[0] %>
+         <%# <div class="navbar-vanilla-profile">
+         <%=reviewer_sample2[1]%>
+         <%# </div> %>
+       <%# </div> %>
+      <%# </div>
+    </div> %>
+<%# </div> %>
 
 
 
