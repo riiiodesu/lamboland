@@ -5,6 +5,7 @@
   <%= f.input :year %>
   <%= f.input :price %>
   <%= f.input :description %>
+  <%= f.input :address %>
   <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit "Add", class: "btn btn-owner mt-3" %>
   <%= link_to "Back", owner_lambos_path , class: "btn btn-back mt-3" %>
