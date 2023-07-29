@@ -35,6 +35,6 @@ class LambosController < ApplicationController
   private
 
   def lambo_params
-    params.require(:lambo).permit(:model, :year, :price, :description, photos: [])
+    params.require(:lambo).permit(:model, :year, :price, :description, :address, photos: [])
   end
 end
