@@ -16,6 +16,9 @@
           <li class="nav-item">
             <%= link_to "Add Lambos", new_lambo_path(@current_user), class: "nav-link" %>
           </li>
+          <li class="nav-item">
+            <%= link_to "My Lambos", owner_lambos_path(@current_user), class: "nav-link" %>
+          </li>
           <li class="nav-item dropdown">
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>

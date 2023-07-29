@@ -14,6 +14,9 @@
             <%= link_to "My Bookings", bookings_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
+            <%= link_to "My Lambos", owner_lambos_path(@current_user), class: "nav-link" %>
+          </li>
+          <li class="nav-item">
             <%= link_to "Add Lambos", new_lambo_path(@current_user), class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
@@ -28,7 +31,7 @@
   </div>
 </div>
 
-<h1>My lambos</h1>
+
 
 <div class="container m-5">
   <div class="row">
@@ -61,8 +64,8 @@
     <% end %>
   </div>
   <div>
-    <%= link_to "Add Lambos", new_lambo_path(@current_user), class: "nav-link btn btn-owner mb-10" %>
-    <%= link_to "Bookings list", owner_bookings_path , class: "btn btn-main mt-3" %>
+    <%# <%= link_to "Add Lambos", new_lambo_path(@current_user), class: "nav-link btn btn-owner mb-10" %>
+    <%= link_to "Bookings list", owner_bookings_path , class: "btn btn-1 mt-3" %>
     <%= link_to "Back", root_path , class: "btn btn-back mt-3" %>
   </div>
 </div>
