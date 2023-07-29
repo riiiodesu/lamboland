@@ -25,6 +25,11 @@ class LambosController < ApplicationController
 
   def show
     @lambo = Lambo.find(params[:id])
+    @marker =
+      {
+        lat: @lambo.latitude,
+        lng: @lambo.longitude
+      }
   end
 
   private
