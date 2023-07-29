@@ -82,3 +82,13 @@ lambo6.photos.attach(io: lambo6_image1, filename: "picture")
 lambo6.photos.attach(io: lambo6_image2, filename: "picture")
 lambo6.photos.attach(io: lambo6_image3, filename: "picture")
 lambo6.save
+
+lambo7 = Lambo.create!(model: "Miura2", price: 3000, year: 1965, description: "Feel the legacy of Lamborghini", user: user2, address: "16 Villa Gaudelet, Paris")
+
+lambo7_image1 = URI.open("https://source.unsplash.com/dt5Q6PTcIdE")
+lambo7_image2 = URI.open("https://source.unsplash.com/1w9vIC1Rt7o")
+lambo7_image3 = URI.open("https://source.unsplash.com/qGgHvnUuwag")
+lambo7.photos.attach(io: lambo7_image1, filename: "picture")
+lambo7.photos.attach(io: lambo7_image2, filename: "picture")
+lambo7.photos.attach(io: lambo7_image3, filename: "picture")
+lambo7.save
