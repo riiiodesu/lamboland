@@ -63,7 +63,7 @@ lambo4.photos.attach(io: lambo4_image2, filename: "picture")
 lambo4.photos.attach(io: lambo4_image3, filename: "picture")
 lambo4.save
 
-lambo5 = Lambo.create!(model: "Gallardo", price: 5000, year: 2010, description: "The Gallardo is the best selling Lamborghini ever with over 14k units sold from 2003 till 2013. Feel lambo now!", user: user2, address: "Tokyo Tower")
+lambo5 = Lambo.create!(model: "Gallardo", price: 5000, year: 2010, description: "The Gallardo...Feeling dangerous already?...Enjoy!", user: user2, address: "Tokyo Tower")
 
 lambo5_image1 = URI.open("https://source.unsplash.com/Ee2p3HV_liA")
 lambo5_image2 = URI.open("https://source.unsplash.com/dnRfgaxfHj0")
@@ -73,7 +73,7 @@ lambo5.photos.attach(io: lambo5_image2, filename: "picture")
 lambo5.photos.attach(io: lambo5_image3, filename: "picture")
 lambo5.save
 
-lambo6 = Lambo.create!(model: "Miura", price: 3000, year: 1965, description: "Feel the legacy of Lamborghini", user: user2, address: "Tokyo Tower")
+lambo6 = Lambo.create!(model: "Miura", price: 3000, year: 1965, description: "Pure Lambo Muscle and V12 Mayhem", user: user2, address: "Tokyo Tower")
 
 lambo6_image1 = URI.open("https://source.unsplash.com/dt5Q6PTcIdE")
 lambo6_image2 = URI.open("https://source.unsplash.com/1w9vIC1Rt7o")

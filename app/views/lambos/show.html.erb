@@ -77,8 +77,12 @@
     <%  reviewer_sample = reviewers_list.to_a %>
     <%  reviewer_sample2 = reviewer_sample.sample %>
 
+    <% randome_review = ["You really know what you are doing...Enjoy the Ride!", "People will remember your name!",
+    "That V12 engine is all you need!", "Your life is complete now!"] %>
+    <% randome = randome_review.sample %>
+<div class="navbar-vanilla-brand" >" <%= randome %> "</div>
     <div class="navbar-vanilla-section">
-      <div class="navbar-vanilla-brand" ><%= @lambo.description %></div>
+
     </div>
     <div class="navbar-vanilla-section">
 
