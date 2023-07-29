@@ -11,7 +11,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
           <li class="nav-item active">
-            <%= link_to "My bookings", bookings_path, class: "nav-link" %>
+            <%= link_to "My Bookings", bookings_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to "Add Lambos", new_lambo_path(@current_user), class: "nav-link" %>
@@ -67,6 +67,38 @@
   </button>
 </div>
 
+<div class="navbar-vanilla">
+
+    <% reviewers_list = {"Ben - Coding Lord" => image_tag("ben_kiwi.jpeg"),
+        "Juri - CSS Empress" => image_tag("juri.jpeg"),
+        "The Bowman - HTML Kung-Fu Master" => image_tag("bowman.jpeg"),
+        "Chris - JS Reality Bender" => image_tag("chris_sf.jpeg")} %>
+
+    <%  reviewer_sample = reviewers_list.to_a %>
+    <%  reviewer_sample2 = reviewer_sample.sample %>
+
+    <div class="navbar-vanilla-section">
+      <div class="navbar-vanilla-brand" ><%= @lambo.description %></div>
+    </div>
+    <div class="navbar-vanilla-section">
+
+       <div class="navbar-vanilla-section">
+        <div class="players"> <%= reviewer_sample2[0] %>
+         <div class="navbar-vanilla-profile">
+         <%=reviewer_sample2[1]%>
+         </div>
+       </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
 <div class = "d-flex align-items-center justify-content-center">
     <%= link_to "Reserve", new_lambo_booking_path(@lambo), class: "btn btn-book-2 mb-3" %>
 </div>
@@ -92,17 +124,17 @@
             <i class="fa-solid fa-dollar-sign fa-lg"style="color: gray;" ></i>
           </div>
           <div class="col-2 d-flex">
-            <h3 class="p-2"><%= @lambo.price %>$/day</h3>
+            <h3 class="p-2"><%= @lambo.price %>/day</h3>
           </div>
         </div>
       </div>
       <div class="container">
         <div class="row">
           <div class="col-1">
-           <i class="fa-solid fa-circle-info"style="color: gray;"></i>
+           <%# <i class="fa-solid fa-circle-info"style="color: gray;"></i> %>
           </div>
           <div class="col-12 d-flex">
-            <h4 class="p-2"><%= @lambo.description %></h4>
+            <%# <h4 class="p-2"><%= @lambo.description %></h4>
           </div>
           <div class="col-1">
             <i class="fa-solid fa-location-dot" style="color: gray;"></i>
@@ -120,41 +152,6 @@
         data-map-marker-value="<%= @marker.to_json %>"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
       </div>
-
-<%# <div class="navbar-vanilla"> %>
-
-    <%# <% reviewers_list = {"Ben - Coding Lord" => image_tag("ben_kiwi.jpeg"),
-        "Juri - CSS Empress" => image_tag("juri.jpeg"),
-        "The Bowman - HTML Kung-Fu Master" => image_tag("bowman.jpeg"),
-        "Chris - JS Reality Bender" => image_tag("chris_sf.jpeg")} %>
-
-    <%# <% reviewer_sample = reviewers_list.to_a %>
-    <%# <% reviewer_sample2 = reviewer_sample.sample %>
-
-    <%# <a class="navbar-vanilla-section" href="#">
-     <div class="navbar-vanilla-brand">" <%= @lambo.description %>
-    <%# <div class="players"> <%= reviewer_sample2[0] %>
-    <%# <div class="navbar-vanilla-section"> %>
-      <%# <div class="navbar-vanilla-profile"> %>
-        <%# <%=reviewer_sample2[1]%>
-      <%# </div> %>
-    <%# </div> %>
-<%# </div> %>
-
-  <%# <div class="item-flip" on:click={toggleFlip} class:flipped={isFlipped}>
-  <div class="item-flip-inner">
-    <div class="item-flip-front">
-      <div class="item-flip-content">
-        <h2>Price Per Day</h2>
-      </div>
-    </div>
-    <div class="item-flip-back">
-      <div class="item-flip-content">
-        <p>$<%= @lambo.price <p>%>
-      <%# </div> %>
-    <%# </div> %>
-  <%# </div> %>
-  <%# </div> %>
 
 
 
