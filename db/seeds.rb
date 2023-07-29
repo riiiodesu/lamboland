@@ -32,7 +32,7 @@ lambo1.photos.attach(io: lambo1_image3, filename: "picture")
 lambo1.save
 
 
-lambo2 = Lambo.create!(model: "Beast", price: 3000, year: 2002, description: "You really know what you are doing. Pure bliss with that V12 Beast!!", user: user1, address: "Tokyo Tower")
+lambo2 = Lambo.create!(model: "Beast", price: 3000, year: 2002, description: "Pure bliss with that V12 Beast!!", user: user1, address: "Tokyo Tower")
 
 lambo2_image1 = URI.open("https://source.unsplash.com/eZQeLcpgTyw")
 lambo2_image2 = URI.open("https://source.unsplash.com/oefX48E9Qck")
@@ -43,7 +43,7 @@ lambo2.photos.attach(io: lambo2_image3, filename: "picture")
 lambo2.save
 
 
-lambo3 = Lambo.create!(model: "Revuelto", price: 9000, year: 2022, description: "What this behemoth of a ride needed...YOU!!...send us photos from your aventures in the road! ", user: user1, address: "Tokyo Tower")
+lambo3 = Lambo.create!(model: "Revuelto", price: 9000, year: 2022, description: "What this behemoth of a ride needed...YOU!!", user: user1, address: "Tokyo Tower")
 
 lambo3_image1 = URI.open("https://source.unsplash.com/PlhpEa-WG6E")
 lambo3_image2 = URI.open("https://source.unsplash.com/VsXHzSdwuik")
